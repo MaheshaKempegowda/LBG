@@ -1,17 +1,18 @@
 package com.task.core.data.dto
 
-import com.task.core.domain.model.UniversityList
+import com.task.core.domain.model.TodoTaskList
 
-data class UniversityDTOItem(
-    val name: String? = "",
-    val code: String? = "",
-    val country: String? = "",
-){
-    fun toUniversityList(): UniversityList {
-        return UniversityList(
-            name = name,
-            code = code,
-            country = country
+
+data class TodoTaskDTOItem(
+
+
+    val title: String? = "",
+    val status: Boolean? = false
+) {
+    fun toTaskList(): TodoTaskList {
+        return TodoTaskList(
+            title = title,
+            status = status
         )
     }
 }
